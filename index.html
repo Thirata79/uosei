@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>割烹 四代目 魚盛（うおせい）｜旬の魚と日本料理</title>
+<meta name="description" content="割烹 四代目 魚盛（うおせい）の公式サイト。代々受け継がれる仕事と、その日いちばんの魚を、落ち着いた空間で。ご予約は電話またはLINEから。">
+<meta name="theme-color" content="#f4ecd8">
+<meta property="og:title" content="割烹 四代目 魚盛（うおせい）">
+<meta property="og:description" content="旬の魚と日本料理。ご予約は電話・LINEから。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf5e6;       /* 和紙の白（本文・基調） */
+    --paper-2:#f3ecd4;     /* 帯（やや黄味の濃いめ和紙） */
+    --ink:#111111;         /* 墨 */
+    --ink-soft:#33312c;
+    --ink-mute:#857d6f;
+    --line:#d8cfb6;
+    --line-soft:#e8debf;
+    --indigo:#0f2d3a;      /* ロゴ専用 */
+    --black:#0b0b0b;       /* 最終CTA・フッター */
+    --black-2:#1a1a1a;
+    --accent:#1a1a1a;      /* セクションラベル等の控えめなアクセント */
+    --maxw:1080px;
+    --serif:"Shippori Mincho","Noto Serif JP","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif;
+    --sans:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:16px;
+    line-height:2;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+    font-feature-settings:"palt";
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative}
+
+  /* ==== Header ==== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(250,245,230,.94);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+    max-width:var(--maxw);
+    margin:0 auto;padding:0 28px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--serif);
+    color:var(--ink);
+  }
+  .brand-logo{
+    width:42px;height:42px;flex:0 0 auto;
+    border-radius:50%;
+    background:var(--indigo) center/cover no-repeat;
+    background-image:url('logo.png');
+  }
+  .brand-text{font-weight:700;font-size:17px;letter-spacing:.18em;line-height:1.3}
+  .brand-text .kappo{
+    display:block;font-size:10px;letter-spacing:.5em;
+    color:var(--ink-mute);font-weight:500;margin-bottom:3px;
+    padding-left:.5em;
+  }
+  .brand-text small{
+    display:block;font-size:10px;letter-spacing:.4em;color:var(--ink-mute);font-weight:500;
+    margin-top:3px;font-family:var(--sans);
+  }
+  nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:13px;letter-spacing:.22em;font-family:var(--serif)}
+  nav a{color:var(--ink-soft);transition:color .2s}
+  nav a:hover{color:var(--ink)}
+  .nav-cta{
+    display:inline-block;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    padding:9px 22px;
+    font-size:12px;
+    letter-spacing:.25em;
+    transition:background .2s,color .2s;
+    font-family:var(--serif);
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--paper)}
+  @media(max-width:840px){
+    nav ul{display:none}
+    .nav-cta{display:none}
+  }
+
+  /* ==== MV (Main Visual) ==== */
+  .mv{
+    position:relative;
+    height:min(86vh, 720px);
+    min-height:520px;
+    overflow:hidden;
+    background:var(--black);
+    margin-top:0;
+  }
+  .mv-image{
+    position:absolute;inset:0;
+    background:url('hero.jpg') center/cover no-repeat;
+    filter:saturate(.85) contrast(.96);
+  }
+  .mv-image::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.05) 35%, rgba(0,0,0,.55) 100%);
+  }
+  .mv-inner{
+    position:relative;z-index:2;height:100%;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 28px 84px;
+    max-width:var(--maxw);margin:0 auto;
+    color:#fff;
+  }
+  .breadcrumb{
+    font-family:var(--serif);
+    font-size:11px;letter-spacing:.3em;
+    color:rgba(255,255,255,.85);
+    margin-bottom:14px;
+  }
+  .breadcrumb span + span::before{content:"／";margin:0 .9em;opacity:.6}
+  .mv-title{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(36px, 6.5vw, 64px);
+    letter-spacing:.18em;
+    line-height:1.2;
+    margin:0 0 6px;
+    padding-left:.18em;
+    text-shadow:0 2px 22px rgba(0,0,0,.5);
+  }
+  .mv-yomi{
+    font-family:var(--serif);
+    font-size:13px;letter-spacing:.5em;
+    color:rgba(255,255,255,.85);
+    padding-left:.5em;
+  }
+  .mv-bottombar{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    background:rgba(11,11,11,.88);
+    color:#fff;
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+  .mv-bottombar-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    font-size:12px;letter-spacing:.2em;
+  }
+  .mv-bottombar a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:1px}
+  .mv-bottombar a:hover{color:#fff;border-color:#fff}
+
+  /* ==== Section common ==== */
+  section{padding:120px 0;position:relative}
+  @media(max-width:680px){
+    section{padding:80px 0}
+  }
+  .sec-label{
+    font-family:var(--serif);
+    text-align:center;
+    font-size:11px;letter-spacing:.7em;color:var(--ink-mute);
+    padding-left:.7em;
+    margin-bottom:14px;
+  }
+  .sec-title{
+    font-family:var(--serif);
+    text-align:center;
+    font-weight:600;
+    font-size:clamp(24px, 3.6vw, 34px);
+    letter-spacing:.22em;
+    margin:0 0 56px;
+    padding-left:.22em;
+    line-height:1.5;
+  }
+  .sec-title::after{
+    content:"";display:block;width:36px;height:1px;background:var(--ink);
+    margin:22px auto 0;opacity:.6;
+  }
+  .lead{
+    max-width:640px;margin:0 auto;
+    text-align:center;
+    font-family:var(--serif);
+    font-size:15px;line-height:2.4;letter-spacing:.1em;
+    color:var(--ink-soft);
+  }
+
+  /* ==== About (poetic) ==== */
+  #about .lead p + p{margin-top:1.4em}
+
+  /* ==== Heritage ==== */
+  #heritage{background:var(--paper-2)}
+  .heritage-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:36px;
+    max-width:880px;margin:48px auto 0;
+  }
+  .heritage-card{margin:0;text-align:center}
+  .heritage-img{
+    aspect-ratio:3/4;
+    background:var(--paper-2) center/cover no-repeat;
+    border:1px solid var(--line);
+  }
+  .heritage-legacy{
+    background-image:url('legacy.jpg');
+    filter:sepia(.18) saturate(.85);
+  }
+  .heritage-current{
+    background-image:url('hero.jpg');
+  }
+  .heritage-card figcaption{
+    margin-top:18px;
+    font-family:var(--serif);
+    font-size:12px;letter-spacing:.35em;color:var(--ink-mute);
+  }
+  @media(max-width:680px){
+    .heritage-grid{grid-template-columns:1fr;gap:24px;max-width:380px}
+  }
+
+  /* ==== Menu ==== */
+  .menu-list{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;
+    max-width:920px;margin:48px auto 0;
+  }
+  .menu-item{text-align:center}
+  .menu-item .photo{
+    aspect-ratio:4/3;
+    background:var(--paper-2) center/cover no-repeat;
+    border:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .menu-item .label{
+    font-family:var(--serif);
+    font-size:20px;font-weight:600;letter-spacing:.25em;
+    margin:0 0 10px;padding-left:.25em;
+  }
+  .menu-item .price{
+    font-family:var(--serif);
+    font-size:14px;letter-spacing:.15em;
+    color:var(--ink-soft);margin:0 0 8px;
+  }
+  .menu-item .note{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.1em;color:var(--ink-mute);
+    margin:0;line-height:1.8;
+  }
+  .menu-bottomnote{
+    text-align:center;
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.15em;color:var(--ink-mute);
+    margin-top:64px;
+  }
+  @media(max-width:680px){
+    .menu-list{grid-template-columns:1fr;gap:40px}
+  }
+
+  /* ==== Reservation block (mid CTA) ==== */
+  .reserve-block{
+    border:1px solid var(--line);
+    background:var(--paper);
+    padding:56px 28px;
+    max-width:780px;margin:80px auto 0;
+    text-align:center;
+  }
+  .reserve-block h3{
+    font-family:var(--serif);
+    font-size:20px;letter-spacing:.3em;
+    margin:0 0 28px;padding-left:.3em;
+    font-weight:600;
+  }
+  .reserve-block h3::after{
+    content:"";display:block;width:28px;height:1px;background:var(--ink);
+    margin:18px auto 0;opacity:.5;
+  }
+  .reserve-rows{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+  }
+  .reserve-row{
+    padding:24px 18px;
+    border-right:1px solid var(--line-soft);
+  }
+  .reserve-row:last-child{border-right:none}
+  .reserve-row .ico{
+    font-family:var(--serif);
+    font-size:11px;letter-spacing:.5em;
+    color:var(--ink-mute);margin-bottom:8px;padding-left:.5em;
+  }
+  .reserve-row .num{
+    font-family:var(--serif);
+    font-size:26px;letter-spacing:.06em;font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    display:block;
+  }
+  .reserve-row .desc{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.1em;color:var(--ink-mute);
+    margin-top:8px;line-height:1.8;
+  }
+  @media(max-width:680px){
+    .reserve-rows{grid-template-columns:1fr}
+    .reserve-row{border-right:none;border-bottom:1px solid var(--line-soft);padding:22px 0}
+    .reserve-row:last-child{border-bottom:none}
+  }
+
+  /* ==== Info dl ==== */
+  #info{background:var(--paper-2)}
+  .info-table{
+    max-width:780px;margin:0 auto;
+  }
+  .info-row{
+    display:grid;grid-template-columns:160px 1fr;
+    border-bottom:1px solid var(--line);
+    padding:22px 8px;
+    gap:18px;
+    align-items:start;
+  }
+  .info-row:first-of-type{border-top:1px solid var(--line)}
+  .info-row dt{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:13px;letter-spacing:.3em;
+    padding-left:.3em;color:var(--ink);
+  }
+  .info-row dd{
+    margin:0;
+    font-family:var(--serif);
+    font-size:15px;letter-spacing:.05em;
+    line-height:2;color:var(--ink-soft);
+  }
+  .info-row dd small{
+    display:block;font-family:var(--sans);
+    font-size:11px;color:var(--ink-mute);margin-top:6px;letter-spacing:.1em;
+  }
+  .info-row dd a{border-bottom:1px solid var(--line);padding-bottom:1px}
+  .info-row dd a:hover{color:var(--ink)}
+  @media(max-width:680px){
+    .info-row{grid-template-columns:1fr;gap:6px;padding:20px 4px}
+    .info-row dt{font-size:11px;padding-left:0}
+  }
+
+  /* ==== Gallery ==== */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+    max-width:var(--maxw);margin:48px auto 0;
+  }
+  .gallery-item{
+    aspect-ratio:1/1;
+    background:var(--paper-2) center/cover no-repeat;
+    border:1px solid var(--line);
+    transition:transform .3s ease, filter .3s ease;
+    cursor:pointer;
+  }
+  .gallery-item:hover{transform:translateY(-2px);filter:saturate(1.1)}
+  .g1{background-image:url('hero.jpg')}
+  .g2{background-image:url('interior.jpg')}
+  .g3{background-image:url('legacy.jpg')}
+  .g4{background-image:url('hero.jpg');background-position:left center}
+  .g5{background-image:url('interior.jpg');background-position:right center}
+  .g6{background-image:url('logo.png');background-color:var(--paper-2);background-size:60%;background-repeat:no-repeat;background-position:center}
+  @media(max-width:680px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  }
+
+  /* ==== Final dark CTA ==== */
+  .cta-dark{
+    background:var(--black);
+    color:#fff;
+    padding:120px 0;
+    text-align:center;
+  }
+  .cta-dark h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(24px, 3.5vw, 32px);
+    letter-spacing:.3em;
+    margin:0 0 20px;padding-left:.3em;
+    color:#fff;
+  }
+  .cta-dark p{
+    font-family:var(--serif);
+    font-size:14px;letter-spacing:.15em;line-height:2.2;
+    color:rgba(255,255,255,.8);
+    margin:0 0 36px;
+  }
+  .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:220px;padding:16px 32px;
+    font-family:var(--serif);
+    font-size:13px;letter-spacing:.3em;
+    border:1px solid #fff;
+    color:#fff;
+    background:transparent;
+    transition:background .2s, color .2s;
+    cursor:pointer;
+  }
+  .btn:hover{background:#fff;color:var(--black)}
+  .btn-primary{background:#fff;border-color:#fff;color:var(--black);font-weight:600}
+  .btn-primary:hover{background:transparent;color:#fff}
+
+  /* ==== Footer ==== */
+  footer{
+    background:var(--black);
+    color:rgba(255,255,255,.7);
+    padding:48px 28px 44px;
+    text-align:center;
+    font-family:var(--serif);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  footer .f-brand{
+    color:#fff;
+    font-size:16px;letter-spacing:.3em;margin-bottom:6px;
+  }
+  footer .f-sns{
+    margin:22px 0 28px;
+    display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
+    font-size:11px;letter-spacing:.25em;
+  }
+  footer .f-sns a{
+    color:rgba(255,255,255,.85);
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding-bottom:1px;
+  }
+  footer .f-sns a:hover{color:#fff;border-color:#fff}
+  footer .f-copy{
+    font-size:10px;letter-spacing:.25em;color:rgba(255,255,255,.5);
+    font-family:var(--sans);
+  }
+
+  /* ==== Sticky mobile CTA ==== */
+  .sticky-cta{
+    display:none;
+    position:fixed;left:10px;right:10px;bottom:10px;z-index:60;
+    gap:8px;
+  }
+  .sticky-cta a{
+    flex:1;min-width:0;padding:14px;font-size:12px;letter-spacing:.2em;
+    text-align:center;
+    background:#fff;color:var(--ink);
+    border:1px solid var(--ink);
+    font-family:var(--serif);
+  }
+  .sticky-cta a.alt{background:var(--black);border-color:var(--black);color:#fff;font-weight:600}
+  @media(max-width:840px){
+    .sticky-cta{display:flex}
+    footer{padding-bottom:96px}
+  }
+
+  /* ==== Reveal on scroll ==== */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .9s ease, transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+</style>
+</head>
+<body>
+
+<!-- ==== Header ==== -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="四代目 魚盛 ホーム">
+      <span class="brand-logo" role="img" aria-label="四代目 魚盛 ロゴ"></span>
+      <span class="brand-text">
+        <span class="kappo">割烹</span>
+        四代目 魚盛
+        <small>UOSEI</small>
+      </span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">紹介</a></li>
+        <li><a href="#heritage">継承</a></li>
+        <li><a href="#menu">お品書き</a></li>
+        <li><a href="#info">店舗情報</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+      </ul>
+    </nav>
+    <a href="#reserve" class="nav-cta">ご予約</a>
+  </div>
+</header>
+
+<!-- ==== MV ==== -->
+<section id="top" class="mv" role="img" aria-label="四代目 魚盛 メインビジュアル">
+  <div class="mv-image"></div>
+  <div class="mv-inner">
+    <h1 class="mv-title">四代目 魚盛</h1>
+    <div class="mv-yomi">うおせい / UOSEI</div>
+  </div>
+  <div class="mv-bottombar">
+    <div class="mv-bottombar-inner">
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div><a href="#info">店舗情報を見る ＞</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== About ==== -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-label">紹介</div>
+    <h2 class="sec-title">Lorem ipsum dolor sit</h2>
+    <div class="lead reveal">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco<br>
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate<br>
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==== Heritage ==== -->
+<section id="heritage">
+  <div class="wrap">
+    <div class="sec-label">継承</div>
+    <h2 class="sec-title">Quattuor generationes</h2>
+    <div class="lead reveal">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        sed do eiusmod tempor incididunt ut labore.
+      </p>
+    </div>
+    <div class="heritage-grid">
+      <figure class="reveal heritage-card">
+        <div class="heritage-img heritage-legacy" role="img" aria-label="legacy"></div>
+        <figcaption>― Lorem ipsum dolor.</figcaption>
+      </figure>
+      <figure class="reveal heritage-card">
+        <div class="heritage-img heritage-current" role="img" aria-label="current"></div>
+        <figcaption>― Consectetur adipiscing elit.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==== Menu ==== -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-label">お品書き</div>
+    <h2 class="sec-title">Pisces et tempora</h2>
+    <div class="lead reveal">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+        sed do eiusmod tempor incididunt ut labore et dolore.
+      </p>
+    </div>
+    <div class="menu-list">
+      <div class="menu-item reveal">
+        <div class="photo" style="background-image:url('interior.jpg')"></div>
+        <p class="label">昼の献立</p>
+        <p class="price">Lorem ipsum ／ Dolor sit ／ Amet consectetur</p>
+        <p class="note">※ Lorem ipsum dolor sit amet<br>Consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+      </div>
+      <div class="menu-item reveal">
+        <div class="photo" style="background-image:url('hero.jpg')"></div>
+        <p class="label">夜の献立</p>
+        <p class="price">Lorem ipsum ／ Dolor sit ／ Amet consectetur</p>
+        <p class="note">※ Lorem ipsum dolor sit amet<br>Consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+      </div>
+    </div>
+
+    <!-- 中段 ご予約・お問い合わせ -->
+    <div class="reserve-block reveal" id="reserve">
+      <h3>ご予約・お問い合わせ</h3>
+      <div class="reserve-rows">
+        <div class="reserve-row">
+          <div class="ico">― TEL ―</div>
+          <a href="tel:08020181112" class="num">080-2018-1112</a>
+          <div class="desc">Lorem ipsum dolor sit amet<br>consectetur adipiscing elit</div>
+        </div>
+        <div class="reserve-row">
+          <div class="ico">― LINE ―</div>
+          <a href="https://lin.ee/88l1q6c" target="_blank" rel="noopener" class="num">LINE 公式</a>
+          <div class="desc">Lorem ipsum dolor sit amet<br>consectetur adipiscing elit</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-bottomnote">※ Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</section>
+
+<!-- ==== Info ==== -->
+<section id="info">
+  <div class="wrap">
+    <div class="sec-label">店舗情報</div>
+    <h2 class="sec-title">Tabernae notitia</h2>
+    <dl class="info-table reveal">
+      <div class="info-row">
+        <dt>店名</dt>
+        <dd>割烹 四代目 魚盛（よんだいめ うおせい）</dd>
+      </div>
+      <div class="info-row">
+        <dt>所在地</dt>
+        <dd>
+          Lorem ipsum dolor sit amet
+          <small>※ Consectetur adipiscing elit</small>
+        </dd>
+      </div>
+      <div class="info-row">
+        <dt>電話番号</dt>
+        <dd><a href="tel:08020181112">080-2018-1112</a></dd>
+      </div>
+      <div class="info-row">
+        <dt>営業時間</dt>
+        <dd>
+          Lorem ipsum dolor
+          <small>※ Sed do eiusmod tempor incididunt</small>
+        </dd>
+      </div>
+      <div class="info-row">
+        <dt>定休日</dt>
+        <dd>
+          Lorem ipsum
+          <small>※ Ut labore et dolore magna aliqua</small>
+        </dd>
+      </div>
+      <div class="info-row">
+        <dt>お支払い</dt>
+        <dd>
+          現金 / クレジットカード
+          <small>VISA・Mastercard・American Express</small>
+        </dd>
+      </div>
+      <div class="info-row">
+        <dt>ご予約方法</dt>
+        <dd>お電話 または LINE 公式アカウント</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ==== Gallery ==== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-label">ギャラリー</div>
+    <h2 class="sec-title">Imagines</h2>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item g1" role="img" aria-label="image 1"></div>
+      <div class="gallery-item g2" role="img" aria-label="image 2"></div>
+      <div class="gallery-item g3" role="img" aria-label="image 3"></div>
+      <div class="gallery-item g4" role="img" aria-label="image 4"></div>
+      <div class="gallery-item g5" role="img" aria-label="image 5"></div>
+      <div class="gallery-item g6" role="img" aria-label="image 6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==== Final dark CTA ==== -->
+<section class="cta-dark">
+  <div class="wrap">
+    <h2>ご予約・お問い合わせ</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+      Sed do eiusmod tempor incididunt ut labore.
+    </p>
+    <div class="cta-buttons">
+      <a href="tel:08020181112" class="btn btn-primary">電話で予約する</a>
+      <a href="https://lin.ee/88l1q6c" class="btn" target="_blank" rel="noopener">LINEで予約する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==== Footer ==== -->
+<footer>
+  <div class="f-brand">割烹 四代目 魚盛</div>
+  <div style="font-size:11px;letter-spacing:.3em">UOSEI</div>
+  <div class="f-sns">
+    <a href="https://lin.ee/88l1q6c" target="_blank" rel="noopener">LINE 公式</a>
+    <a href="https://www.instagram.com/uosei_4th/" target="_blank" rel="noopener">Instagram ＠uosei_4th</a>
+    <a href="tel:08020181112">080-2018-1112</a>
+  </div>
+  <div class="f-copy">© 四代目 魚盛 All Rights Reserved.</div>
+</footer>
+
+<!-- ==== Mobile sticky CTA ==== -->
+<div class="sticky-cta">
+  <a href="tel:08020181112" class="alt">電話予約</a>
+  <a href="https://lin.ee/88l1q6c" target="_blank" rel="noopener">LINE予約</a>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
