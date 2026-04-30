@@ -355,6 +355,20 @@
     .info-row dt{font-size:11px;padding-left:0}
   }
 
+  /* ==== Info map ==== */
+  .info-map{
+    max-width:780px;margin:48px auto 0;
+    border:1px solid var(--line);
+    background:var(--paper);
+  }
+  .info-map iframe{filter:grayscale(.15) contrast(.95)}
+  .info-map-link{
+    text-align:right;padding:14px 18px;border-top:1px solid var(--line-soft);
+    font-family:var(--serif);font-size:12px;letter-spacing:.2em;
+  }
+  .info-map-link a{color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:1px}
+  .info-map-link a:hover{color:var(--ink)}
+
   /* ==== Gallery ==== */
   .gallery-grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
@@ -545,12 +559,12 @@
     </div>
     <div class="heritage-grid">
       <figure class="reveal heritage-card">
-        <div class="heritage-img heritage-legacy" role="img" aria-label="legacy"></div>
-        <figcaption>― Lorem ipsum dolor.</figcaption>
+        <div class="heritage-img heritage-legacy" role="img" aria-label="三代目 父"></div>
+        <figcaption>― 三代目</figcaption>
       </figure>
       <figure class="reveal heritage-card">
-        <div class="heritage-img heritage-current" role="img" aria-label="current"></div>
-        <figcaption>― Consectetur adipiscing elit.</figcaption>
+        <div class="heritage-img heritage-current" role="img" aria-label="四代目"></div>
+        <figcaption>― 四代目</figcaption>
       </figure>
     </div>
   </div>
@@ -616,8 +630,8 @@
       <div class="info-row">
         <dt>所在地</dt>
         <dd>
-          Lorem ipsum dolor sit amet
-          <small>※ Consectetur adipiscing elit</small>
+          神奈川県横浜市西区浅間町 1-4-12
+          <small>※ 駐車場のご用意はございません</small>
         </dd>
       </div>
       <div class="info-row">
@@ -650,6 +664,15 @@
         <dd>お電話 または LINE 公式アカウント</dd>
       </div>
     </dl>
+    <div class="info-map reveal">
+      <iframe
+        src="https://www.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%A5%BF%E5%8C%BA%E6%B5%85%E9%96%93%E7%94%BA1-4-12&output=embed"
+        width="100%" height="380" style="border:0;display:block" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="四代目 魚盛 地図"></iframe>
+      <div class="info-map-link">
+        <a href="https://maps.google.com/?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E8%A5%BF%E5%8C%BA%E6%B5%85%E9%96%93%E7%94%BA1-4-12" target="_blank" rel="noopener">大きな地図で見る ＞</a>
+      </div>
+    </div>
   </div>
 </section>
 
